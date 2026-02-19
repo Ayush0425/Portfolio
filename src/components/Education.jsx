@@ -13,7 +13,7 @@ const Education = () => {
                             <GraduationCap size={20} />
                         </div>
                         <div className="timeline-content">
-                            <span className="timeline-date">2021 - 2024</span>
+                            <span className="timeline-date">2024 - 2027</span>
                             <h3>Bachelor of Computer Applications (BCA)</h3>
                             <h4>JECRC University</h4>
                             <p>
@@ -28,7 +28,7 @@ const Education = () => {
                             <GraduationCap size={20} />
                         </div>
                         <div className="timeline-content">
-                            <span className="timeline-date">2021</span>
+                            <span className="timeline-date">2023</span>
                             <h3>12th Grade (Senior Secondary)</h3>
                             <h4>School Name</h4>
                             <p>Completed higher secondary education with a focus on Mathematics and Computer Science.</p>
