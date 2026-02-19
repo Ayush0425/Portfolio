@@ -5,6 +5,14 @@ import ScrollReveal from './ScrollReveal';
 const Projects = () => {
     const projects = [
         {
+            title: "Personal Portfolio",
+            description: "A modern, responsive personal portfolio website built with React and Vite.",
+            tags: ["React", "Vite", "CSS"],
+            image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            github: "https://github.com/Ayush0425/Portfolio",
+            demo: "#"
+        },
+        {
             title: "Netflix Clone",
             description: "A responsive frontend web application replicating the Netflix UI. diverse movie categories, and hover effects.",
             tags: ["HTML", "CSS"],
