@@ -1,16 +1,77 @@
-# React + Vite
+# Portfolio Website 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with **React** and **Vite**. This project showcases my skills, experience, and projects in a clean, professional interface.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🌓 Dark/Light Mode**: Seamlessly switch between themes with a toggle button.
+- **📱 Fully Responsive**: Optimized for all devices, from mobile phones to large desktops.
+- **✨ Smooth Animations**: Elements animate into view on scroll for an engaging experience.
+- **🎨 Modern UI/UX**: Clean design with custom CSS variables and glassmorphism effects.
+- **🖼️ Project Showcase**: Interactive cards displaying my work with GitHub and Demo links.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React
+- **Build Tool**: Vite
+- **Styling**: Pure CSS (with CSS Variables)
+- **Icons**: Lucide React
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these steps to run the project locally on your machine.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) installed (version 16 or higher recommended).
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ayush0425/Portfolio.git
+   ```
+
+2. **Navigate to the project directory**
+   ```bash
+   cd Portfolio
+   ```
+
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in Browser**
+   Visit `http://localhost:5173` to view the site.
+
+## 📂 Project Structure
+
+```
+├── public/          # Static assets (images, icons)
+├── src/
+│   ├── components/  # Reusable React components (Navbar, Hero, etc.)
+│   ├── styles/      # CSS files for each component
+│   ├── App.jsx      # Main application component
+│   └── main.jsx     # Entry point
+└── index.html       # Main HTML file
+```
+
+## 📦 Deployment
+
+To deploy this project:
+1. Push your changes to GitHub.
+2. Connect your repository to a hosting service like **Vercel** or **Netlify**.
+3. It will automatically detect the Vite settings and build your site!
+
+## 📬 Contact
+
+- **GitHub**: [Ayush0425](https://github.com/Ayush0425)
+
+---
+*Built with ❤️ by Ayush*
