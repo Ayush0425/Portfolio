@@ -16,7 +16,7 @@ const Projects = () => {
             title: "Netflix Clone",
             description: "A responsive frontend web application replicating the Netflix UI. diverse movie categories, and hover effects.",
             tags: ["HTML", "CSS"],
-            image: "https://images.unsplash.com/photo-1574375927938-d5a98e8efe30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            image: "/projects/netflix-bg.jpg",
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
             demo: "https://netflix-clone-demo.com"
         },
