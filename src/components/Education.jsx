@@ -44,7 +44,7 @@ const Education = () => {
                             <h3>Personal & Academic Projects</h3>
                             <h4>Self-Learning</h4>
                             <p>
-                                Developed various frontend projects including a Netflix Clone and Nike Landing Page.
+                                Developed various frontend projects including a Netflix Clone.
                                 Gained hands-on experience with React, JavaScript, and UI/UX design principles.
                             </p>
                         </div>

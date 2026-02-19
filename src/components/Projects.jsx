@@ -12,14 +12,7 @@ const Projects = () => {
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
             demo: "https://netflix-clone-demo.com"
         },
-        {
-            title: "Nike Shoes Website",
-            description: "An interactive e-commerce landing page for Nike shoes featuring smooth animations and modern design.",
-            tags: ["HTML", "CSS", "JavaScript"],
-            image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-            github: "https://github.com/Ayush0425",
-            demo: "https://nike-demo.com"
-        }
+
     ];
 
     return (
