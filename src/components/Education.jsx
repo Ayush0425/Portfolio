@@ -18,7 +18,7 @@ const Education = () => {
                             <h4>JECRC University</h4>
                             <p>
                                 Graduated with a focus on software development fundamentals, database management, and web technologies.
-                                Active participant in coding clubs and technical events.
+                                Active participant in College Events.
                             </p>
                         </div>
                     </div>
@@ -30,8 +30,8 @@ const Education = () => {
                         <div className="timeline-content">
                             <span className="timeline-date">2023</span>
                             <h3>12th Grade (Senior Secondary)</h3>
-                            <h4>School Name</h4>
-                            <p>Completed higher secondary education with a focus on Mathematics and Computer Science.</p>
+                            <h4>Krishna Public School</h4>
+
                         </div>
                     </div>
 
