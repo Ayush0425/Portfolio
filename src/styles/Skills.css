@@ -63,3 +63,13 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-category {
+        padding: 1.5rem;
+    }
+}
