@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { Resend } from 'resend'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const resendApiKey = process.env.VITE_RESEND_API_KEY || process.env.RESEND_API_KEY;
 // Only instantiate if API key exists to prevent crashing if someone clones without it
