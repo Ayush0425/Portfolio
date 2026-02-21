@@ -37,7 +37,7 @@ const About = () => {
                         <p className="about-text">
                             I am a dedicated and enthusiastic <strong>Software Developer</strong> with a strong foundation in Computer Applications.
                             My journey in tech has been driven by curiosity and a desire to build impactful solutions.
-                            I recently completed my <strong>BCA from JECRC University</strong> and have hands-on experience building web applications using <strong>React</strong> and <strong>JavaScript</strong>.
+                            I am currently doing <strong>BCA from JECRC University</strong> and have hands-on experience building web applications using <strong>React</strong> and <strong>JavaScript</strong>.
                         </p>
 
                         <p className="about-text">

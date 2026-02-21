@@ -8,16 +8,37 @@ const Contact = () => {
         email: '',
         message: ''
     });
+    const [status, setStatus] = useState('idle'); // 'idle', 'loading', 'success', 'error'
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Placeholder for form submission logic
-        alert(`Thank you, ${formData.name}! Your message has been sent (simulated).`);
-        setFormData({ name: '', email: '', message: '' });
+        setStatus('loading');
+
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send email');
+            }
+
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+            setTimeout(() => setStatus('idle'), 5000);
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
     };
 
     return (
@@ -94,9 +115,24 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="btn btn-primary submit-btn">
-                            Send Message <Send size={18} />
+                        <button
+                            type="submit"
+                            className="btn btn-primary submit-btn"
+                            disabled={status === 'loading'}
+                        >
+                            {status === 'loading' ? 'Sending...' : 'Send Message'} <Send size={18} />
                         </button>
+
+                        {status === 'success' && (
+                            <p className="status-message success" style={{ color: 'var(--primary-color)', marginTop: '1rem', textAlign: 'center' }}>
+                                Message sent successfully! I'll get back to you soon.
+                            </p>
+                        )}
+                        {status === 'error' && (
+                            <p className="status-message error" style={{ color: 'red', marginTop: '1rem', textAlign: 'center' }}>
+                                Failed to send message. Please try again later.
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>
