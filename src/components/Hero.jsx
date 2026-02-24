@@ -26,7 +26,7 @@ const Hero = () => {
                     <h1 className="hero-name">Ayush Raj</h1>
                     <h2 className="hero-role">{text}<span className="cursor">|</span></h2>
                     <p className="hero-description">
-                        A passionate fresher skilled in React, C++, and Python.
+                        A passionate software developer skilled in React, C++, and Python.
                         I love building modern web applications and exploring new technologies.
                     </p>
 
