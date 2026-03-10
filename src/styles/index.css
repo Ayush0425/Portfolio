@@ -1,7 +1,7 @@
 :root {
     --bg-color: #f8fafc;
     --text-color: #0f172a;
-    --primary-color: #6366f1;
+    --primary-color: #10b981;
     --secondary-color: #64748b;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
@@ -14,7 +14,7 @@
 [data-theme='dark'] {
     --bg-color: #020617;
     --text-color: #f8fafc;
-    --primary-color: #818cf8;
+    --primary-color: #34d399;
     --secondary-color: #94a3b8;
     --card-bg: #0f172a;
     --border-color: #1e293b;
