@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 80px;
-    background: linear-gradient(-45deg, #ff00cc, #333399, #00ffcc, #ffcc00, #ff0066);
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
     background-size: 400% 400%;
     animation: crazy-bg 10s ease infinite;
     /* Offset for fixed navbar */
