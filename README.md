@@ -74,4 +74,4 @@ To deploy this project:
 - **GitHub**: [Ayush0425](https://github.com/Ayush0425)
 
 ---
-*Built with ❤️ by Ayush*
+*Built with ❤️ by Ayush | 2026*
