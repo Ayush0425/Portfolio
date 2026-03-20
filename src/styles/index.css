@@ -7,7 +7,7 @@
     --border-color: #e2e8f0;
     --nav-bg: rgba(248, 250, 252, 0.85);
 
-    --font-main: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --font-main: 'Montserrat', 'Poppins', system-ui, -apple-system, sans-serif;
     --transition-speed: 0.3s;
 }
 
