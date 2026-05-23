@@ -163,7 +163,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transform: rotate(90deg);
 }
 
 .image-blob {
