@@ -5,6 +5,14 @@ import ScrollReveal from './ScrollReveal';
 const Projects = () => {
     const projects = [
         {
+            title: "Studyverse - AI Study Companion",
+            description: "A collaborative e-learning and study platform featuring real-time group study rooms, shared Notepad collaboration via Socket.io, synced Pomodoro timer, AI-generated quizzes using Gemini AI, and a gamified XP leaderboard system.",
+            tags: ["React", "Node.js", "MongoDB", "Socket.io", "Gemini AI"],
+            image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            github: "https://github.com/Ayush0425/studyverse",
+            demo: "https://studyyverse.vercel.app/"
+        },
+        {
             title: "Personal Portfolio",
             description: "A modern, responsive personal portfolio website built with React and Vite.",
             tags: ["React", "Vite", "CSS"],
@@ -20,7 +28,6 @@ const Projects = () => {
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
             demo: "https://netflix-clone-demo.com"
         },
-
     ];
 
     return (
