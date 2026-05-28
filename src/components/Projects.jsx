@@ -26,7 +26,7 @@ const Projects = () => {
             tags: ["HTML", "CSS"],
             image: "/projects/netflix-bg.jpg",
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
-            demo: "https://netflix-clone-demo.com"
+            demo: "https://web-dev-netflix-project.vercel.app/"
         },
     ];
 
