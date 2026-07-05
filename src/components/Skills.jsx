@@ -4,23 +4,25 @@ import { CheckCircle2 } from 'lucide-react';
 const Skills = () => {
     const skillsData = [
         {
-            category: "Frontend Development",
+            category: "Languages & Frameworks",
             items: [
-                { name: "HTML", level: "Experienced" },
-                { name: "CSS/Vanilla", level: "Experienced" },
+                { name: "C++", level: "Experienced" },
+                { name: "Python", level: "Intermediate" },
                 { name: "JavaScript", level: "Intermediate" },
-                { name: "React", level: "Beginner" },
-                { name: "UI/UX Design", level: "Intermediate" },
+                { name: "HTML & CSS", level: "Experienced" },
+                { name: "Node.js & Express.js", level: "Intermediate" },
+                { name: "Tailwind CSS", level: "Experienced" },
             ]
         },
         {
-            category: "Programming & Tools",
+            category: "Databases & Tools",
             items: [
-                { name: "C / C++", level: "Intermediate" },
-                { name: "Python", level: "Beginner" },
+                { name: "MySQL & MongoDB", level: "Intermediate" },
+                { name: "Supabase", level: "Beginner" },
                 { name: "Git & GitHub", level: "Intermediate" },
-                { name: "DBMS", level: "Basics" },
                 { name: "VS Code", level: "Experienced" },
+                { name: "Vercel & Render", level: "Intermediate" },
+                { name: "MongoDB Compass", level: "Intermediate" },
             ]
         }
     ];

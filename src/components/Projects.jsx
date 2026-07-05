@@ -5,25 +5,25 @@ import ScrollReveal from './ScrollReveal';
 const Projects = () => {
     const projects = [
         {
-            title: "Studyverse - AI Study Companion",
-            description: "A collaborative e-learning and study platform featuring real-time group study rooms, shared Notepad collaboration via Socket.io, synced Pomodoro timer, AI-generated quizzes using Gemini AI, and a gamified XP leaderboard system.",
-            tags: ["React", "Node.js", "MongoDB", "Socket.io", "Gemini AI"],
-            image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-            github: "https://github.com/Ayush0425/studyverse",
-            demo: "https://studyyverse.vercel.app/"
-        },
-        {
-            title: "Personal Portfolio",
-            description: "A modern, responsive personal portfolio website built with React and Vite.",
-            tags: ["React", "Vite", "CSS"],
-            image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-            github: "https://github.com/Ayush0425/Portfolio",
+            title: "ExpenseOS",
+            description: "Developed a full-stack expense management application using Node.js, Express.js, and MongoDB. Implemented secure user authentication, expense tracking, and CRUD operations. Designed responsive dashboards using Tailwind CSS with real-time expense visualization and category-based organization.",
+            tags: ["Node.js", "Express.js", "MongoDB", "Tailwind CSS", "React"],
+            image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            github: "https://github.com/Ayush0425/ExpenseOs",
             demo: "#"
         },
         {
-            title: "Netflix Clone",
-            description: "A responsive frontend web application replicating the Netflix UI. diverse movie categories, and hover effects.",
-            tags: ["HTML", "CSS"],
+            title: "Portfolio Website",
+            description: "Designed and developed a responsive portfolio website using HTML, CSS, JavaScript, and Tailwind CSS. Implemented reusable UI components, optimized layouts, and applied responsive design principles to ensure cross-device compatibility.",
+            tags: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React"],
+            image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            github: "https://github.com/Ayush0425/Portfolio",
+            demo: "https://github.com/Ayush0425/Portfolio"
+        },
+        {
+            title: "Netflix UI Clone",
+            description: "Developed a responsive clone of the Netflix landing page using HTML, CSS, and JavaScript. Executed reusable UI components and modern layouts to replicate the original interface. Applied responsive design techniques to ensure cross-device compatibility.",
+            tags: ["HTML", "CSS", "JavaScript"],
             image: "/projects/netflix-bg.jpg",
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
             demo: "https://web-dev-netflix-project.vercel.app/"
