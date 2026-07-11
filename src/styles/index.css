@@ -1,24 +1,25 @@
 :root {
-    --bg-color: #f8fafc;
-    --text-color: #0f172a;
-    --primary-color: #10b981;
-    --secondary-color: #64748b;
-    --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --nav-bg: rgba(248, 250, 252, 0.85);
+    --bg-color: #FAF8F5;
+    --text-color: #1E2433;
+    --primary-color: #C0563E;
+    --secondary-color: #5C687A;
+    --card-bg: #FFFFFF;
+    --border-color: #E6E0D8;
+    --nav-bg: rgba(250, 248, 245, 0.9);
 
-    --font-main: 'Montserrat', 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Lora', 'Georgia', serif;
     --transition-speed: 0.3s;
 }
 
 [data-theme='dark'] {
-    --bg-color: #020617;
-    --text-color: #f8fafc;
-    --primary-color: #34d399;
-    --secondary-color: #94a3b8;
-    --card-bg: #0f172a;
-    --border-color: #1e293b;
-    --nav-bg: rgba(2, 6, 23, 0.85);
+    --bg-color: #12151C;
+    --text-color: #EBD9CE;
+    --primary-color: #E27E67;
+    --secondary-color: #8FA0B5;
+    --card-bg: #1A1E28;
+    --border-color: #262D3C;
+    --nav-bg: rgba(18, 21, 28, 0.9);
 }
 
 html {
@@ -96,6 +97,9 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 1.2;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.25;
     margin-bottom: 1rem;
 }

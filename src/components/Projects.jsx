@@ -10,7 +10,7 @@ const Projects = () => {
             tags: ["Node.js", "Express.js", "MongoDB", "Tailwind CSS", "React"],
             image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
             github: "https://github.com/Ayush0425/ExpenseOs",
-            demo: "#"
+            demo: "https://expense-os-wheat.vercel.app/"
         },
         {
             title: "Portfolio Website",
@@ -40,23 +40,25 @@ const Projects = () => {
                 <div className="projects-grid">
                     {projects.map((project, index) => (
                         <ScrollReveal key={index} style={{ transitionDelay: `${index * 100}ms` }}>
-                            <div className="project-card">
+                             <div className="project-card">
                                 <div className="project-image">
                                     <img src={project.image} alt={project.title} />
-                                    <div className="project-overlay">
-                                        <div className="project-links">
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="View Code">
-                                                <Github size={24} />
-                                            </a>
-                                            <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
-                                                <ExternalLink size={24} />
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <div className="project-info">
-                                    <h3>{project.title}</h3>
+                                    <div className="project-header">
+                                        <h3>{project.title}</h3>
+                                        <div className="project-card-links">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="View Code">
+                                                <Github size={18} />
+                                            </a>
+                                            {project.demo !== "#" && (
+                                                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="Live Demo">
+                                                    <ExternalLink size={18} />
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
                                     <p>{project.description}</p>
                                     <div className="project-tags">
                                         {project.tags.map((tag, idx) => (

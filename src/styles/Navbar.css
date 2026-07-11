@@ -3,10 +3,10 @@
     top: 0;
     z-index: 1000;
     background-color: var(--nav-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
-    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+    padding: 1.25rem 0;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), padding var(--transition-speed);
 }
 
 .nav-container {
@@ -16,47 +16,52 @@
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-color);
     letter-spacing: -0.5px;
 }
 
 .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav-links a {
     font-weight: 500;
+    font-size: 0.95rem;
     color: var(--secondary-color);
     position: relative;
+    transition: color var(--transition-speed);
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
-/* Underline animation for desktop links */
+/* Subtle dot animation for active/hover page links */
 .nav-links a::after {
     content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
     background-color: var(--primary-color);
-    transition: width 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+    transform: translateX(-50%) scale(1);
 }
 
 .mobile-nav-toggle {
@@ -71,18 +76,18 @@
 
 .mobile-menu {
     position: fixed;
-    top: 60px;
-    /* Adjust based on navbar height */
+    top: 70px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     background-color: var(--bg-color);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 1px solid var(--border-color);
 }
 
 .mobile-menu.active {
@@ -98,7 +103,8 @@
 }
 
 .mobile-nav-links a {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-color);
     display: block;
