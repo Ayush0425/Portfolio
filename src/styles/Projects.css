@@ -1,119 +1,141 @@
 .projects-section {
-    background-color: var(--bg-color);
-    padding: 6rem 0;
+    padding: 2.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.projects-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .project-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
+    background-color: var(--bg-color);
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(30, 36, 51, 0.03);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    transition: transform var(--transition-speed), border-color var(--transition-speed), background-color var(--transition-speed);
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(192, 86, 62, 0.3);
-    box-shadow: 0 15px 35px rgba(30, 36, 51, 0.06);
+    border-color: var(--text-color);
+}
+
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px dashed var(--border-color);
 }
 
 .project-image {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image img {
+.project-card:hover .project-image {
     transform: scale(1.03);
 }
 
+.project-image-overlay {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 5;
+}
+
+.project-meta-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    background-color: var(--bg-color);
+    color: var(--text-muted);
+    border: 1px dashed var(--border-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
 .project-info {
-    padding: 1.75rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
     flex-grow: 1;
 }
 
-.project-header {
+.project-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.75rem;
 }
 
-.project-info h3 {
+.project-card-header h3 {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 400;
     margin-bottom: 0;
-    color: var(--text-color);
-    font-weight: 700;
 }
 
 .project-card-links {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
-.project-link {
-    color: var(--secondary-color);
-    transition: color 0.25s, transform 0.25s;
+.project-icon-link {
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color);
+    color: var(--text-muted);
+    transition: color var(--transition-speed), border-color var(--transition-speed), background-color var(--transition-speed);
 }
 
-.project-link:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
+.project-icon-link:hover {
+    color: var(--text-color);
+    border-color: var(--text-color);
+    background-color: rgba(120, 120, 120, 0.08);
 }
 
-.project-info p {
-    color: var(--secondary-color);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    flex-grow: 1;
+.project-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.35rem;
     margin-top: auto;
 }
 
-.tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-    border-radius: 4px;
-    font-weight: 500;
-    border: 1px solid var(--border-color);
-    transition: all 0.25s ease;
+.project-tag-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background-color: var(--card-bg);
+    border: 1px dotted var(--border-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
 }
 
-.project-card:hover .tag {
-    border-color: rgba(192, 86, 62, 0.15);
-    color: var(--primary-color);
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }

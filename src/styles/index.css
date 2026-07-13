@@ -1,30 +1,39 @@
 :root {
-    --bg-color: #FAF8F5;
-    --text-color: #1E2433;
-    --primary-color: #C0563E;
-    --secondary-color: #5C687A;
-    --card-bg: #FFFFFF;
-    --border-color: #E6E0D8;
-    --nav-bg: rgba(250, 248, 245, 0.9);
-
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --text-muted: #525252;
+    --border-color: #e5e5e5;
+    --grid-line-color: #e5e5e5;
+    --card-bg: #fafafa;
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    
+    --font-heading: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'Space Mono', monospace;
     --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --font-heading: 'Lora', 'Georgia', serif;
-    --transition-speed: 0.3s;
+    
+    --accent-color: #2563eb;
+    --accent-color-rgb: 37, 99, 235;
+    --transition-speed: 0.2s;
+    
+    --grid-line-opacity: 1;
 }
 
-[data-theme='dark'] {
-    --bg-color: #12151C;
-    --text-color: #EBD9CE;
-    --primary-color: #E27E67;
-    --secondary-color: #8FA0B5;
-    --card-bg: #1A1E28;
-    --border-color: #262D3C;
-    --nav-bg: rgba(18, 21, 28, 0.9);
+.dark, [data-theme='dark'] {
+    --bg-color: #0F0E0E;
+    --text-color: #ffffff;
+    --text-muted: #a3a3a3;
+    --border-color: #272727;
+    --grid-line-color: #272727;
+    --card-bg: #151515;
+    --nav-bg: rgba(15, 14, 14, 0.85);
+    --accent-color: #60a5fa;
+    --accent-color-rgb: 96, 165, 250;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: 100%;
 }
 
 * {
@@ -38,18 +47,19 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color var(--transition-speed), color var(--transition-speed);
-    line-height: 1.6;
+    line-height: 1.5;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    min-height: 100%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color var(--transition-speed);
+    transition: color var(--transition-speed), opacity var(--transition-speed);
 }
 
 ul {
@@ -61,11 +71,95 @@ button {
     border: none;
     background: none;
     font-family: inherit;
+    color: inherit;
+}
+
+/* Typography styles matching reference site */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.mono-text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Layout container styling */
+.portfolio-layout {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Grids & Blueprint effects */
+.border-dashed-x {
+    border-left: 1px dashed var(--border-color);
+    border-right: 1px dashed var(--border-color);
+}
+
+.border-dashed-y {
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.border-dashed-t {
+    border-top: 1px dashed var(--border-color);
+}
+
+.border-dashed-b {
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.border-dashed-all {
+    border: 1px dashed var(--border-color);
+}
+
+/* Vertical and Horizontal lines overlay */
+.bg-grid-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    border-left: 1px dashed var(--border-color);
+    border-right: 1px dashed var(--border-color);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.horizontal-grid-line {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    border-top: 1px dashed var(--border-color);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Common interactive hover states */
+.active-scale:active {
+    transform: scale(0.97);
+}
+
+.hover-bg:hover {
+    background-color: rgba(120, 120, 120, 0.05);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -73,33 +167,10 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
-    border-radius: 4px;
+    background: var(--border-color);
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-section {
-    padding: 4rem 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--text-color);
-    line-height: 1.25;
-    margin-bottom: 1rem;
+    background: var(--text-muted);
 }

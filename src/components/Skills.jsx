@@ -1,55 +1,76 @@
+import { useState } from 'react';
+import { playHover, playClick } from '../utils/sound';
 import '../styles/Skills.css';
-import { CheckCircle2 } from 'lucide-react';
 
 const Skills = () => {
+    const categories = ["All", "Languages", "Frontend", "Backend", "Tools"];
+    const [activeFilter, setActiveFilter] = useState("All");
+
     const skillsData = [
-        {
-            category: "Languages & Frameworks",
-            items: [
-                { name: "C++", level: "Experienced" },
-                { name: "Python", level: "Intermediate" },
-                { name: "JavaScript", level: "Intermediate" },
-                { name: "HTML & CSS", level: "Experienced" },
-                { name: "Node.js & Express.js", level: "Intermediate" },
-                { name: "Tailwind CSS", level: "Experienced" },
-            ]
-        },
-        {
-            category: "Databases & Tools",
-            items: [
-                { name: "MySQL & MongoDB", level: "Intermediate" },
-                { name: "Supabase", level: "Beginner" },
-                { name: "Git & GitHub", level: "Intermediate" },
-                { name: "VS Code", level: "Experienced" },
-                { name: "Vercel & Render", level: "Intermediate" },
-                { name: "MongoDB Compass", level: "Intermediate" },
-            ]
-        }
+        { name: "C++", type: "Languages" },
+        { name: "Python", type: "Languages" },
+        { name: "JavaScript", type: "Languages" },
+        { name: "HTML & CSS", type: "Frontend" },
+        { name: "Tailwind CSS", type: "Frontend" },
+        { name: "React", type: "Frontend" },
+        { name: "Node.js", type: "Backend" },
+        { name: "Express.js", type: "Backend" },
+        { name: "MongoDB", type: "Backend" },
+        { name: "MySQL", type: "Backend" },
+        { name: "Supabase", type: "Backend" },
+        { name: "Git & GitHub", type: "Tools" },
+        { name: "VS Code", type: "Tools" },
+        { name: "Vercel", type: "Tools" },
     ];
 
-    return (
-        <section id="skills" className="skills-section">
-            <div className="container">
-                <h2 className="section-title">My Skills</h2>
+    const filteredSkills = activeFilter === "All" 
+        ? skillsData 
+        : skillsData.filter(s => s.type === activeFilter);
 
-                <div className="skills-container">
-                    {skillsData.map((category, index) => (
-                        <div key={index} className="skills-category">
-                            <h3>{category.category}</h3>
-                            <div className="skills-grid">
-                                {category.items.map((skill, idx) => (
-                                    <div key={idx} className="skill-item">
-                                        <CheckCircle2 className="skill-icon" size={16} />
-                                        <div className="skill-info">
-                                            <h4>{skill.name}</h4>
-                                            <span className="skill-level">{skill.level}</span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+    const handleFilterClick = (cat) => {
+        playClick();
+        setActiveFilter(cat);
+    };
+
+    return (
+        <section id="skills" className="skills-section border-dashed-b">
+            <div className="skills-header">
+                <div className="skills-title-group">
+                    <h2>Tech Stack</h2>
+                    <span className="play-instruction">
+                        <span className="desktop-inst">( hover to play )</span>
+                        <span className="mobile-inst">( tap to play )</span>
+                    </span>
+                </div>
+                
+                {/* Category filters */}
+                <div className="skills-filters">
+                    {categories.map((cat) => (
+                        <button
+                            key={cat}
+                            className={`filter-btn ${activeFilter === cat ? 'active' : ''}`}
+                            onClick={() => handleFilterClick(cat)}
+                        >
+                            {cat}
+                        </button>
                     ))}
                 </div>
+            </div>
+
+            <div className="skills-grid-container">
+                {filteredSkills.map((skill, index) => (
+                    <div
+                        key={skill.name}
+                        className="skill-badge border-dashed-all"
+                        onMouseEnter={() => playHover(index)}
+                        onClick={() => {
+                            playHover(index);
+                        }}
+                    >
+                        <span className="skill-dot"></span>
+                        <span className="skill-name">{skill.name}</span>
+                    </div>
+                ))}
             </div>
         </section>
     );
