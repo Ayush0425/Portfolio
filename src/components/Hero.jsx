@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Github, Linkedin, Mail, Download, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, MapPin, Twitter } from 'lucide-react';
 import profileImg from '../assets/profile.jpeg';
 import { playClick } from '../utils/sound';
 import '../styles/Hero.css';
@@ -106,6 +106,16 @@ const Hero = () => {
                             onClick={playClick}
                         >
                             <Linkedin size={18} />
+                        </a>
+                        <a 
+                            href="https://x.com/ayushdewal2005" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Twitter"
+                            className="social-icon-btn active-scale"
+                            onClick={playClick}
+                        >
+                            <Twitter size={18} />
                         </a>
                         <a 
                             href="mailto:ayushdewal2005@gmail.com" 
