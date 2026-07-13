@@ -108,10 +108,10 @@ const Hero = () => {
                             <Linkedin size={18} />
                         </a>
                         <a 
-                            href="https://x.com/ayushdewal2005" 
+                            href="https://x.com/AyushRaj0425" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            aria-label="Twitter"
+                            aria-label="X"
                             className="social-icon-btn active-scale"
                             onClick={playClick}
                         >

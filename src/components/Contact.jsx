@@ -55,8 +55,8 @@ const Contact = () => {
             icon: <Linkedin size={18} />
         },
         {
-            name: "Twitter",
-            url: "https://x.com/ayushdewal2005", // placeholder or real
+            name: "X",
+            url: "https://x.com/AyushRaj0425",
             icon: <Twitter size={18} />
         },
         {
