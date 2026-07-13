@@ -78,7 +78,7 @@
 .timeline-info h3 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     margin-bottom: 0.25rem;
 }

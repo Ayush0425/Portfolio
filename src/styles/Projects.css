@@ -82,7 +82,7 @@
 .project-card-header h3 {
     font-family: var(--font-heading);
     font-size: 1.4rem;
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     margin-bottom: 0;
 }

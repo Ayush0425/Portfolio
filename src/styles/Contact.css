@@ -73,7 +73,7 @@
 .contact-info h3 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     margin-bottom: 0;
 }
