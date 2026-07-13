@@ -29,7 +29,7 @@ const Projects = () => {
             image: "https://images.unsplash.com/photo-1574375927938-d5a98e8edd86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
             github: "https://github.com/Ayush0425/web-dev-netflix-project",
             demo: "https://web-dev-netflix-project.vercel.app/",
-            meta: "UI/UX"
+            meta: "Frontend"
         },
     ];
 
