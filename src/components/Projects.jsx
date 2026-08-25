@@ -5,6 +5,15 @@ import { playClick } from '../utils/sound';
 const Projects = () => {
     const projects = [
         {
+            title: "NexMeet",
+            description: "Developed a full-stack event management platform enabling seamless event discovery, ticket booking, and management. Implemented JWT authentication, protected routes, Razorpay payment gateway integration, and dedicated dashboards for users and organizers.",
+            tags: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "Razorpay"],
+            image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            github: "https://github.com/Ayush0425/NexMeet",
+            demo: "https://nex-meet-sigma.vercel.app/",
+            meta: "Full Stack"
+        },
+        {
             title: "ExpenseOS",
             description: "Developed a full-stack expense management application using Node.js, Express.js, and MongoDB. Implemented secure user authentication, expense tracking, and CRUD operations. Designed responsive dashboards using Tailwind CSS with real-time expense visualization and category-based organization.",
             tags: ["Node.js", "Express.js", "MongoDB", "React"],
